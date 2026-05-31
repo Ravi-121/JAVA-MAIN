@@ -2,7 +2,7 @@ public class TwoPointer {
   public static void main(String[] args) {
 
     int[] A = { 1, 2, 4, 6, 8, 10 };
-    int target = 14;
+    int target = 13;
     int left = 0;
     int right = A.length - 1;
 
@@ -12,13 +12,13 @@ public class TwoPointer {
 
       if (target == sum) {
         System.out.println("Target found at " + left + ", " + right);
+        System.out.println("The pair is " +A[left]+ ", " +A[right]);
         break;
       } else if (target > sum) {
         left++;
-      } else {
+      } else if(target < sum) {
         right--;
       }
-
     }
 
   }
