@@ -1,8 +1,8 @@
 public class BinarySearch {
   public static void main(String[] args) {
 
-    int[] A = {10};
-    int target = 10;
+    int[] A = {7};
+    int target = 7;
     int left = 0;
     int right = A.length - 1;
 
@@ -19,7 +19,7 @@ public class BinarySearch {
       }
 
     }
-    System.out.println("-1");
+    System.out.println("Target not found");
 
   }
 

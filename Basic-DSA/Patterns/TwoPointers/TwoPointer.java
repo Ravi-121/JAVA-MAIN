@@ -2,18 +2,18 @@ package Patterns.TwoPointers;
 public class TwoPointer {
   public static void main(String[] args) {
 
-    int[] A = { 1, 2, 4, 6, 8, 10 };
-    int target = 13;
+    int[] A = {1,2,3};
+    int target = 0;
     int left = 0;
     int right = A.length - 1;
 
     while (left < right) {
 
-      int sum = A[left] + A[right];
+      int sum = A[left]+ A[left+1] + A[right];
 
       if (target == sum) {
-        System.out.println("Target found at " + left + ", " + right);
-        System.out.println("The pair is " +A[left]+ ", " +A[right]);
+        System.out.println("Target found at " + left + ", "+ (left+1) +" & " + right);
+        System.out.println("The pair is " +A[left]+ ", "+ A[left +1]+" & " +A[right]);
         break;
       } else if (target > sum) {
         left++;
@@ -21,6 +21,8 @@ public class TwoPointer {
         right--;
       }
     }
+    
+    System.out.println("Target not found");
 
   }
 
