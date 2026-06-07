@@ -14,10 +14,13 @@ public class SecondLargest {
         largest = A[i];
       }
 
+      
       else if (secondLargest < A[i] && secondLargest != largest) {
         secondLargest = A[i];
       }
 
+
+  
     }
     System.out.println("The Second Largest number is: " + secondLargest);
 
